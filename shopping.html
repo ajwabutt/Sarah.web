@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Collection | SARAH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top custom-nav">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="fa-solid fa-bag-shopping me-2"></i>SARAH
+        </a>
+        
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="fa-solid fa-bars-staggered"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html"><i class="fa-solid fa-house me-1"></i> HOME</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-cart-shopping me-1"></i> SHOP
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="shopDropdown">
+                        <li><a class="dropdown-item" href="men.html">Men</a></li>
+                        <li><a class="dropdown-item" href="women.html">Women</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="kid.html">Kids</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html"><i class="fa-solid fa-envelope me-1"></i> CONTACT</a>
+                </li>
+                
+             <li class="nav-item">
+    <a class="nav-link" href="product-detail.html">
+        <i class="fa-solid fa-circle-info me-1"></i> DETAILS
+    </a>
+</li>
+
+                <li class="nav-item mx-lg-3">
+                    <a class="nav-link position-relative cart-icon-nav" href="shopping.html">
+                        <i class="fa-solid fa-cart-arrow-down fs-5"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+                            0
+                        </span>
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-2">
+                    <a class="btn btn-login" href="login.html" style="border: 1px solid #fff; color: white;">
+                        <i class="fa-solid fa-user-lock me-1"></i> LOGIN
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="shop-header d-flex flex-column align-items-center justify-content-center text-center text-white mb-5" 
+     style="position: relative; 
+            height: 100vh; 
+            width: 100%; 
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('image.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;">
+            
+    <div style="z-index: 1;">
+        <h1 class="display-2 fw-bold text-uppercase" style="letter-spacing: 5px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">SARAH COLLECTION</h1>
+        <p class="fs-4">Premium Quality | Exclusive Designs</p>
+    </div>
+</div>   
+
+<div class="container mb-5">
+    <div class="category-filter-box shadow-sm mb-5 p-3 bg-white rounded-pill d-flex justify-content-center flex-wrap gap-2">
+        <button class="btn filter-btn active-filter" onclick="filterSelection('all')">VIEW ALL</button>
+        <button class="btn filter-btn" onclick="window.location.href='men.html'"><i class="fa fa-mars me-2"></i>MEN</button>
+        <button class="btn filter-btn" onclick="window.location.href='women.html'"><i class="fa fa-venus me-2"></i>WOMEN</button>
+        <button class="btn filter-btn" onclick="window.location.href='kid.html'"><i class="fa fa-child me-2"></i>KIDS</button>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="productContainer">
+        
+       <div class="col filter-item men">
+    <div class="shop-card shadow-sm border-0 h-100 position-relative overflow-hidden">
+        <a href="men.html">
+            <img src="men1.jpg" class="card-img-top" alt="Men">
+        </a>
+        
+        <div class="card-body text-center p-4">
+            <span class="badge bg-dark mb-2">Men</span>
+            
+            <a href="men.html" style="text-decoration: none; color: inherit;">
+                <h5 class="fw-bold">Casual Denim Shirt</h5>
+            </a>
+            
+            <p class="text-danger fs-5 fw-bold">PKR 3,500</p>
+            <button class="btn btn-dark w-100 py-2 rounded-pill" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+        <div class="col filter-item women">
+            <div class="shop-card shadow-sm border-0 h-100 position-relative overflow-hidden">
+                 <a href="women.html">
+                <img src="women1.jpg" class="card-img-top" alt="Women" >
+                </a>
+                <div class="card-body text-center p-4">
+                    <span class="badge bg-danger mb-2">Women</span>
+                    <a href="women.html" style="text-decoration: none; color: inherit;">
+                    <h5 class="fw-bold">Silk Evening Dress</h5></a>
+                    <p class="text-danger fs-5 fw-bold">PKR 8,500</p>
+                    <button class="btn btn-dark w-100 py-2 rounded-pill" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col filter-item kids">
+            <div class="shop-card shadow-sm border-0 h-100 position-relative overflow-hidden">
+                 <a href="kid.html">
+                <img src="kid1.jpg" class="card-img-top" >
+                </a>
+                <div class="card-body text-center p-4">
+                    <span class="badge bg-info mb-2">Kids</span>
+                    <a href="kid.html" style="text-decoration: none; color: inherit;">
+                    <h5 class="fw-bold">Cotton Play Suit</h5></a>
+                    <p class="text-danger fs-5 fw-bold">PKR 2,200</p>
+                    <button class="btn btn-dark w-100 py-2 rounded-pill" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html" class="fw-bold fs-2 text-danger text-decoration-none">SARAH</a>
+                        </div>
+                        <div class="footer-text mt-3">
+                            <p>Premium fashion brand for Men, Women, and Kids. We believe in quality and style that speaks for you. Dress to express!</p>
+                        </div>
+                        <div class="footer-social-icon mt-4">
+                            <span class="fw-bold me-2">Follow Us:</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget ps-lg-5">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shopping.html">shopping</a></li>
+                            <li><a href="product-detail.html">Our Services</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Contact Us</h3>
+                        </div>
+                        <div class="footer-text">
+                            <p><i class="fa fa-map-marker-alt text-danger me-2"></i> 123 Street, Fashion City, PK</p>
+                            <p><i class="fa fa-phone text-danger me-2"></i> +92 300 1234567</p>
+                            <p><i class="fa fa-envelope-open text-danger me-2"></i> info@sarahfashion.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2026 <a href="index.html">SARAH</a>. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<body>
+    <html>
+
+  
+

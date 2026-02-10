@@ -1,0 +1,884 @@
+.hero-section {
+    position: relative;
+    height: 100vh; /* 100 height set ho gayi */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2; /* Sabse peeche */
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Video ko dark karne ke liye */
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 1; /* Text ko upar rakhne ke liye */
+}
+/* Product Card Hover Effect */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+.navbar-brand {
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+}
+
+/* Contact Form Styling */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+/* --- Contact Page Custom Styling --- */
+
+/* Form Background with Glassmorphism */
+.contact-container {
+    max-width: 650px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Soft Shadow */
+    border: 1px solid #eee;
+}
+
+.contact-container h2 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #222;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Stylish Input Fields */
+.form-control {
+    border: 2px solid #f1f1f1;
+    border-radius: 10px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ff4757; /* Accent Color */
+    box-shadow: 0 0 8px rgba(255, 71, 87, 0.2);
+    outline: none;
+}
+
+/* Submit Button Style */
+.btn-submit {
+    background: linear-gradient(45deg, #222, #444);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(45deg, #ff4757, #ff6b81);
+    transform: scale(1.02);
+    color: white;
+}
+
+
+
+/* Custom Navbar Styling */
+.custom-nav {
+    padding: 15px 0;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Brand Style */
+.navbar-brand {
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #ff4757 !important; /* Brand color */
+}
+
+/* Link Hover Animation */
+.nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff4757;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #ff4757 !important;
+}
+
+/* Stylish Login Button */
+.btn-login {
+    border: 2px solid #ff4757;
+    color: #ff4757;
+    border-radius: 25px;
+    padding: 8px 25px;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+.btn-login:hover {
+    background: #ff4757;
+    color: white !important;
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+/* Mobile Icon Toggler */
+.navbar-toggler-icon {
+    font-size: 1.2rem;
+}
+
+/* About Section Custom Styles */
+#about {
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.about-img-container {
+    position: relative;
+    padding: 15px;
+}
+
+.about-img-container img {
+    transition: transform 0.5s ease;
+}
+
+.about-img-container:hover img {
+    transform: scale(1.02);
+}
+
+/* Stylish Floating Badge */
+.experience-badge {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background: #ff4757;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(255, 71, 87, 0.4);
+    animation: floating 3s ease-in-out infinite;
+}
+
+.experience-badge span {
+    font-size: 24px;
+    display: block;
+    line-height: 1;
+}
+
+.experience-badge p {
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* Floating Animation */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- Stylish Footer CSS --- */
+.footer-section {
+    background: #151414;
+    position: relative;
+    color: #878787;
+}
+
+.footer-widget-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.footer-widget-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: #ff4757;
+}
+
+.footer-widget ul li {
+    margin-bottom: 12px;
+}
+
+.footer-widget ul li a {
+    color: #878787;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-widget ul li a:hover {
+    color: #ff4757;
+    padding-left: 5px;
+}
+
+/* Social Icons */
+.footer-social-icon a i {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.facebook-bg { background: #3B5998; }
+.instagram-bg { background: #E1306C; }
+.twitter-bg { background: #55ACEE; }
+
+.footer-social-icon a:hover i {
+    transform: translateY(-5px);
+}
+
+/* Copyright Section */
+.copyright-area {
+    background: #202020;
+    padding: 25px 0;
+}
+
+.copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #878787;
+}
+
+.copyright-text p a {
+    color: #ff4757;
+    text-decoration: none;
+}
+
+/* Card Overlay on Hover */
+.product-card {
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+.product-card img {
+    height: 350px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.card-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.product-card:hover .card-hover-overlay {
+    opacity: 1;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+.filter-btn {
+    border-radius: 30px;
+    padding: 8px 25px;
+    font-weight: 600;
+}
+
+/* Shopping Header */
+.shop-header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('shop-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Category Filter Buttons */
+.category-filter-box {
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.filter-btn {
+    border: none;
+    background: transparent;
+    padding: 10px 25px;
+    font-weight: 600;
+    color: #555;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.filter-btn:hover, .active-filter {
+    background-color: #ff4757 !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+/* Product Card Styling */
+.shop-card {
+    transition: all 0.4s ease;
+    border-radius: 15px;
+}
+
+.shop-card img {
+    height: 320px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.shop-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.shop-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Hide animation for filtering */
+.filter-item {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Shop Page Category Cards */
+.category-card {
+    transition: 0.5s ease;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.category-card:hover {
+    transform: scale(0.98);
+    border: 2px solid #ff4757;
+    box-shadow: 0 10px 30px rgba(255, 71, 87, 0.4) !important;
+}
+
+.category-card h2 {
+    transition: 0.5s;
+    letter-spacing: 5px;
+}
+
+.category-card:hover h2 {
+    transform: scale(1.2);
+    color: #ff4757 !important;
+}
+
+/* Category Banner Style */
+.category-box {
+    height: 450px;
+    cursor: pointer;
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    transition: 0.5s;
+    opacity: 0.9;
+}
+
+.category-box:hover .category-overlay {
+    background: rgba(255, 71, 87, 0.6); /* Brand Red Theme on Hover */
+}
+
+.category-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.8s;
+}
+
+.category-box:hover img {
+    transform: scale(1.1);
+}
+
+/* Login Page Specific Styling */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.contact-container:hover {
+    transform: translateY(-5px);
+}
+
+.contact-container h2 {
+    font-weight: 700;
+    color: #212529;
+    letter-spacing: -1px;
+}
+
+/* Input Fields Styling */
+.form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ff4757;
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.1);
+    outline: none;
+}
+
+/* Stylish Submit Button */
+.btn-submit {
+    background: #212529;
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+    background: #ff4757;
+    color: white;
+    box-shadow: 0 8px 15px rgba(255, 71, 87, 0.3);
+    transform: scale(1.02);
+}
+
+/* Checkbox Color */
+.form-check-input:checked {
+    background-color: #ff4757;
+    border-color: #ff4757;
+}
+
+/* Login Wrapper Fix */
+.login-wrapper {
+    min-height: calc(100vh - 70px); /* 100vh minus navbar height */
+    padding: 40px 0;
+    background-color: #f8f9fa; /* Light background */
+}
+
+/* Card Styling */
+.contact-container {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+}
+
+/* Navbar se takrane se bachane ke liye spacing */
+.custom-nav {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Input boxes refinement */
+.form-control {
+    background-color: #fdfdfd;
+    border: 1px solid #e0e0e0;
+}
+
+.form-control:focus {
+    background-color: #fff;
+    border-color: #ff4757;
+    box-shadow: 0 0 0 0.25rem rgba(255, 71, 87, 0.1);
+}
+
+/* Shopping Cart Icon Styling */
+.cart-icon-nav {
+    color: #ffffff !important;
+    transition: 0.3s ease;
+    padding: 8px 12px !important;
+}
+
+.cart-icon-nav:hover {
+    color: #ff4757 !important; /* Hover par brand color */
+    transform: scale(1.1);
+}
+
+.cart-badge {
+    font-size: 10px;
+    padding: 4px 6px;
+    border: 1px solid #ffffff;
+}
+
+/* Login button ko thoda separate karne ke liye */
+.btn-login {
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-weight: 500;
+}
+
+/* Card ko center aur navbar se niche karne ke liye */
+.login-page-wrapper {
+    /* Navbar ki wajah se padding-top dena zaroori hai */
+    padding-top: 120px !important; 
+    padding-bottom: 60px;
+    min-height: 100vh;
+    background: #f4f7f6;
+    display: flex;
+    align-items: center; /* Vertical alignment */
+}
+
+/* Card ki khoobsurti ke liye */
+.login-card-container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    margin-top: 20px;
+}
+
+/* Shop Header Big Styling */
+.shop-header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('your-banner-image.jpg') no-repeat center center/cover;
+    min-height: 450px; /* Header ki height barhadi */
+    width: 100%;
+}
+
+.shop-header h1 {
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Card Styling for 3-Column Layout */
+.shop-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+}
+
+.shop-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+.shop-card img {
+    height: 450px; /* Image height barhadi taake 3 cards mein fit lage */
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.shop-card:hover img {
+    transform: scale(1.05);
+}
+
+.tracking-wider {
+    letter-spacing: 0.2rem;
+}
+
+/* Quality Section Styling */
+.quality-section {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+/* Jab mouse quality icons par jaye toh wo thoda zoom hon */
+.d-flex:hover .icon-box {
+    transform: scale(1.2);
+}
+
+.quality-section img {
+    transition: all 0.5s ease;
+}
+
+.quality-section img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+}
+
+/* Policy Card Styling */
+.policy-section .card {
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+    background: #ffffff;
+}
+
+/* Card Hover Effect */
+.policy-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    background-color: #f8f9fa;
+}
+
+/* Icons Animation */
+.policy-section i {
+    transition: all 0.4s ease;
+}
+
+.policy-section .card:hover i {
+    transform: rotateY(180deg); /* Icon ko ghumane ke liye */
+    color: #000; /* Hover par icon ka rang badalne ke liye */
+}
+
+/* Section Headings */
+h2.fw-bold {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+h2.fw-bold::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #dc3545; /* Red line heading ke niche */
+}
+
+/* Text adjustments */
+.text-muted {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Shop Dropdown link par hover color */
+.nav-item.dropdown:hover .nav-link {
+    color: #dc3545 !important; /* Bootstrap Danger Red Color */
+    transition: 0.3s;
+}
+
+/* Dropdown menu ke andar items par hover color */
+.dropdown-menu-dark .dropdown-item:hover {
+    background-color: #dc3545 !important; /* Background red ho jayega */
+    color: white !important; /* Text white rahega */
+}
+
+/* Navbar icon ka color bhi hover par red karne ke liye */
+.nav-link:hover i {
+    color: #dc3545;
+}
+
+/* Mouse le jane par dropdown khul jaye (Desktop view ke liye) */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; 
+    }
+}
+
+/* Custom Styles for Responsiveness */
+
+.contact-container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Mobile Screens (Small Devices) */
+@media (max-width: 576px) {
+    .contact-container {
+        padding: 20px; /* Thoda kam padding mobile par */
+        margin: 10px;
+    }
+    
+    h2 {
+        font-size: 1.5rem; /* Heading thodi choti */
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* Navbar adjust for Mobile */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: left;
+        padding: 20px 0;
+    }
+    .nav-item {
+        border-bottom: 1px solid #333;
+        width: 100%;
+        padding: 5px 0;
+    }
+}
+
+/* Footer adjust for Mobile */
+.footer-section p {
+    font-size: 14px;
+}
+
+/* Responsive Map Container */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 400px; /* Map height for mobile */
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* Form Container Styling */
+.contact-container {
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+/* Adjustments for Mobile Screens */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px !important;
+        margin: 0 10px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-widget {
+        text-align: center;
+    }
+
+    .footer-social-icon {
+        justify-content: center;
+    }
+    
+    .map-responsive {
+        padding-bottom: 300px; /* Mobile par thoda chota map */
+    }
+}
+
+/* Navbar item spacing on mobile */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #212529;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    
+    .nav-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #333;
+    }
+}
+/* Cards ko responsive banane ke liye */
+.custom-card-img {
+    height: 450px; /* Desktop par height */
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+@media (max-width: 576px) {
+    .custom-card-img {
+        height: 300px !important; /* Mobile par height kam kar di */
+    }
+    
+    /* Hero Image (Shopping Page Banner) Fix */
+    .shop-header {
+        height: 300px !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+}
+
+
+/* Mobile Hero Image Adjustment */
+@media (max-width: 768px) {
+    .shop-header {
+        min-height: 250px !important; /* Mobile par height kam ki */
+        background-attachment: scroll !important; /* Parallax effect band kiya */
+        background-size: cover !important; /* Image poori cover karegi */
+        background-position: center center !important; /* Image ka center dikhega */
+    }
+
+    .shop-header h1 {
+        font-size: 1.8rem !important; /* Heading choti ki taake fit aaye */
+        letter-spacing: 2px !important;
+    }
+}
